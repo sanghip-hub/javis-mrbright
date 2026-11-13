@@ -2,7 +2,7 @@
 # ============================================================
 # Đóng gói file ZIP để gửi khách (cài không cần biết GitHub).
 #
-#   bash mrbright/build-zip.sh      # -> dist/JavisMrBright-<phiên bản>.zip
+#   bash mrbright/build-zip.sh      # -> ../dist/JavisMrBright-<phiên bản>.zip
 #
 # Gói lấy từ commit hiện tại (đã commit, không lấy file nháp), có kèm lịch sử git để nút Cập nhật
 # trong Javis chạy được, và trỏ "origin" về repo của anh. Không chứa dữ liệu/khoá của máy anh.
@@ -16,8 +16,8 @@ REPO="$("$PY" -c 'import json;print(json.load(open("mrbright/brand.json"))["repo
 VER="$(cat VERSION)"
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
-OUT="$ROOT/dist/JavisMrBright-$VER.zip"
-mkdir -p "$ROOT/dist" "$TMP/JavisMrBright-$VER"
+OUT="$(cd "$ROOT/.." && pwd)/dist/JavisMrBright-$VER.zip"   # ngoài repo, khỏi lỡ commit
+mkdir -p "$(dirname "$OUT")" "$TMP/JavisMrBright-$VER"
 PKG="$TMP/JavisMrBright-$VER"
 
 git clone -q --no-hardlinks "$ROOT" "$PKG/javis"

@@ -22,7 +22,7 @@ File `LICENSE` của bản gốc được giữ nguyên. Giấy phép MIT bắt 
 - Windows (PowerShell): `irm https://raw.githubusercontent.com/sanghip-hub/javis-mrbright/main/mrbright/install/cai-windows.ps1 | iex`
 - Mac (Terminal): `curl -fsSL https://raw.githubusercontent.com/sanghip-hub/javis-mrbright/main/mrbright/install/cai-mac.sh | bash`
 
-**Cách 2: file ZIP.** Chạy `bash mrbright/build-zip.sh` để ra file `dist/JavisMrBright-<phiên bản>.zip`, rồi gửi cho khách.
+**Cách 2: file ZIP.** Chạy `bash mrbright/build-zip.sh` để ra file `../dist/JavisMrBright-<phiên bản>.zip`, rồi gửi cho khách.
 - Windows: giải nén, bấm đúp `CAI-DAT-WINDOWS.bat`.
 - Mac: giải nén, chuột phải vào `CAI-DAT-MAC.command`, chọn Open.
 

@@ -3,14 +3,14 @@
 # JAVIS MR BRIGHT - CAI DAT 1 CU BAM TREN MAC
 #
 # Cach 1 (co mang): mo Terminal, dan:
-#   curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/mrbright/install/cai-mac.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/sanghip-hub/javis-mrbright/main/mrbright/install/cai-mac.sh | bash
 # Cach 2 (tu file ZIP): giai nen, bam chuot phai CAI-DAT-MAC.command > Open
 #
 # Cai vao ~/JavisOS. Dung lai bo cai goc cua Javis (packaging/macos/bootstrap.sh: Git, Python,
 # Node, cac bo nao AI, venv, tu khoi dong), chi doi nguon tai ve repo cua Javis Mr Bright.
 # ============================================================
 set -u
-REPO="https://github.com/OWNER/REPO.git"   # MRB_REPO (mrbright/apply.py tu dien)
+REPO="https://github.com/sanghip-hub/javis-mrbright.git"   # MRB_REPO (mrbright/apply.py tu dien)
 BRANCH="main"                              # MRB_BRANCH
 NGUON="${1:-}"                             # thu muc ma nguon trong goi ZIP (CAI-DAT-MAC.command truyen vao)
 export JAVIS_HOME="${JAVIS_HOME:-$HOME/JavisOS}"

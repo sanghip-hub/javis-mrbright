@@ -5,6 +5,8 @@ Kiến trúc: Voice (browser) ⇄ FastAPI WebSocket ⇄ Claude Code CLI subproce
 Javis KHÔNG gọi Anthropic API trực tiếp. Mọi reasoning + tool calling đi qua
 `claude` CLI đã cài trên máy → tự kế thừa MCP, skills, auth.
 """
+import ban_quyen as _mrb_ban_quyen  # Javis Mr Bright: khoá bản quyền (mrbright/apply.py)
+_mrb_ban_quyen.chan_neu_khoa()  # hết hạn thì dừng ở đây, Javis không được nạp
 import brain_seed_i18n   # file hạt giống của brain mới theo ngôn ngữ người dùng
 import brain_label   # tên hiển thị của brain, tách khỏi thư mục (0.219.0)
 import brain_export   # xuất/nhập cả bộ não thành một file .zip (2026-11-09)
@@ -17182,7 +17184,7 @@ async def config():
 # ============================================
 # Phiên bản + cập nhật trong UI
 # ============================================
-GITHUB_REPO = "blogminhquy/javis-os"
+GITHUB_REPO = "sanghip-hub/javis-mrbright"
 _UPDATE_TASKS = set()   # giữ ref mạnh cho asyncio.create_task (tránh GC nuốt mất task)
 
 
@@ -33980,3 +33982,6 @@ async def plan_limits_get(goi: int = 0):
 async def batch_reads(request: Request):
     import read_batch
     return await read_batch.handle(app, request)
+
+
+_mrb_ban_quyen.gan_vao(app)  # Javis Mr Bright (mrbright/apply.py)

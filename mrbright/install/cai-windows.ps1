@@ -2,7 +2,7 @@
 # JAVIS MR BRIGHT - CAI DAT 1 CU BAM TREN WINDOWS
 #
 # Cach 1 (co mang, khong can file):  mo PowerShell, dan:
-#   irm https://raw.githubusercontent.com/OWNER/REPO/main/mrbright/install/cai-windows.ps1 | iex
+#   irm https://raw.githubusercontent.com/sanghip-hub/javis-mrbright/main/mrbright/install/cai-windows.ps1 | iex
 # Cach 2 (tu file ZIP): giai nen, bam dup CAI-DAT-WINDOWS.bat
 #
 # Cai vao %USERPROFILE%\JavisOS. Dung lai bo cai goc cua Javis (packaging/windows/bootstrap.ps1:
@@ -15,7 +15,7 @@ param(
   [string]$Nguon = "",                                           # thu muc ma nguon trong goi ZIP
   [string]$Dir = (Join-Path $env:USERPROFILE "JavisOS")
 )
-$Repo = "https://github.com/OWNER/REPO.git"   # MRB_REPO (mrbright/apply.py tu dien)
+$Repo = "https://github.com/sanghip-hub/javis-mrbright.git"   # MRB_REPO (mrbright/apply.py tu dien)
 $Branch = "main"                              # MRB_BRANCH
 $ErrorActionPreference = "Continue"
 $ProgressPreference = "SilentlyContinue"
